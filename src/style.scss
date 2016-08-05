@@ -26,6 +26,10 @@ button {
   border-width: thin;
   background-color: darken(white, 15%)
 }
+.siteName {
+  font-family: fantasy;
+  font-weight: bold;
+}
 
 .postSummary {
   display: flex;
@@ -35,6 +39,21 @@ button {
   border-width: thin;
   border-style: solid;
   background-color: darken(white, 5%);
+}
+
+.Title {
+  font-size: 18px;
+}
+
+.homeDelete {
+  border-color: firebrick;
+  background-color: lighten(firebrick, 2%);
+  color: darken(white, 10%);
+  align-self: center;
+}
+.homeDelete:active {
+  background-color: darken(firebrick, 2%);
+  color: white;
 }
 
 .NewFields {
@@ -77,14 +96,24 @@ button {
   color: black;
 }
 
+.deleteButton {
+  border-color: firebrick;
+  background-color: lighten(firebrick, 2%);
+  color: darken(white, 10%);
+}
+.deleteButton:active {
+  background-color: darken(firebrick, 2%);
+  color: white;
+}
+
 a {
   color: navy;
-  text-decoration: none;
+  text-decoration: none !important;
   text-decoration-color: transparent;
   text-decoration-line: none;
 }
 a:hover, a:active {
-  text-decoration: none;
+  text-decoration: none !important;
   text-decoration-color: transparent;
   background-color: transparent;
   color: mediumblue;

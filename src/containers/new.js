@@ -33,6 +33,7 @@ class New extends Component {
   }
 
   onCreation(event) {
+    this.props.createPost(this.state);
     this.setState({
       title: '',
       content: '',

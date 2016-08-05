@@ -1,30 +1,39 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router';
+import * as actions from '../actions';
 
-const Home = (props) => {
-  return (
-    <div>
-      <h2>Posts</h2>
-      <ul>
-      {
-        props.posts.map((post) => {
-          return (
-            <li key={post.id} className="postSummary">
-              <Link to="posts/:1">{post.title}</Link>
-              {post.tags.map((tag) => {
-                return (
-                  tag
-                );
-              })}
-            </li>
-          );
-        })
-      }
-      </ul>
-    </div>
-  );
-};
+class Home extends Component {
+
+  componentWillMount() {
+    this.props.fetchPosts();
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Posts</h2>
+        <ul>
+        {
+          this.props.posts.map((post) => {
+            return (
+              <li key={post.id} className="postSummary">
+                <Link to={`posts/${post.id}`} className="Title">{post.title}</Link>
+                {post.tags.split(',').map((tag) => {
+                  return (
+                    tag
+                  );
+                })}
+                <button className="homeDelete" onClick={() => { this.props.deletePost(post.id); }}> Delete Post </button>
+              </li>
+            );
+          })
+        }
+        </ul>
+      </div>
+    );
+  }
+}
 
 const mapStateToProps = (state) => (
   {
@@ -34,4 +43,4 @@ const mapStateToProps = (state) => (
 
 
 // react-redux glue -- outputs Container that knows how to call actions
-export default connect(mapStateToProps, null)(Home);
+export default connect(mapStateToProps, actions)(Home);
