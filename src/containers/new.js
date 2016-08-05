@@ -46,7 +46,7 @@ class New extends Component {
         <input onChange={this.onTitleChange} placeholder="title" value={this.state.title} />
         <input onChange={this.onContentChange} placeholder="content" value={this.state.content} />
         <input onChange={this.onTagsChange} placeholder="tags" value={this.state.tags} />
-        <button onClick={this.onCreation} to="/">
+        <button onClick={this.onCreation} className="newButton">
           Create New Post
         </button>
       </div>

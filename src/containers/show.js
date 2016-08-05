@@ -41,9 +41,9 @@ class Show extends Component {
     } else {
       this.setState({
         editing: true,
-        title: this.props.posts[0].title,
-        content: this.props.posts[0].content,
-        tags: this.props.posts[0].tags,
+        title: this.props.post.title,
+        content: this.props.post.content,
+        tags: this.props.post.tags,
       });
     }
   }
@@ -52,23 +52,23 @@ class Show extends Component {
     if (this.state.editing) {
       return (
         <div className="NewFields">
+          <button onClick={this.onEditChange} className="doneButton">
+            Done
+          </button>
           <input onChange={this.onTitleChange} placeholder="title" value={this.state.title} />
           <input onChange={this.onContentChange} placeholder="content" value={this.state.content} />
           <input onChange={this.onTagsChange} placeholder="tags" value={this.state.tags} />
-          <button onClick={this.onEditChange}>
-            Done
-          </button>
         </div>
       );
     } else {
       return (
         <div className="NewFields">
-          <div>{this.props.posts[0].title}</div>
-          <div>{this.state.content}</div>
-          <div>Tags: {this.state.tags}</div>
-          <button onClick={this.onEditChange}>
+          <button onClick={this.onEditChange} className="editButton">
             Edit
           </button>
+          <h3>{this.props.post.title}</h3>
+          <p>{this.props.post.content}</p>
+          <div>Tags: {this.props.post.tags}</div>
         </div>
       );
     }

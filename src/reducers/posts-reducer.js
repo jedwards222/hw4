@@ -1,6 +1,8 @@
 import { ActionTypes } from '../actions';
 
-const PostsReducer = (state = { all: [{ id: 1, title: 'First', text: 'This is my first blog post!', tags: ['fun ', 'happy '] }], post: 1 }, action) => {
+const PostsReducer = (state = { all: [
+  { id: 1, title: 'First', content: 'This is my first blog post!', tags: ['fun ', 'happy '] }],
+  post: { id: 1, title: 'First', content: 'This is my first blog post!', tags: ['fun ', 'happy '] } }, action) => {
   switch (action.type) {
     case ActionTypes.DECREMENT:
       return state;
