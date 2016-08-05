@@ -5,3 +5,41 @@ body {
   margin: 50px;
   font-size: 16px;
 }
+
+button {
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.Navbar {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  border-style: solid;
+  border-width: thin;
+  background-color: darken(white, 15%)
+}
+
+.postSummary {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-radius: 3px;
+  border-width: thin;
+  border-style: solid;
+  background-color: darken(white, 5%);
+}
+
+.NewFields {
+  display: flex;
+  flex-direction: column;
+}
+
+.NewFields input {
+  margin: 5px;
+  padding: 2px;
+  border-radius: 4px;
+  height: 20px;
+}
