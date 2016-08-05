@@ -19,11 +19,13 @@ class Home extends Component {
             return (
               <li key={post.id} className="postSummary">
                 <Link to={`posts/${post.id}`} className="Title">{post.title}</Link>
-                {post.tags.split(',').map((tag) => {
-                  return (
-                    tag
-                  );
-                })}
+                <div className="tag">
+                  {post.tags.split(',').map((tag) => {
+                    return (
+                      tag
+                    );
+                  })}
+                </div>
                 <button className="homeDelete" onClick={() => { this.props.deletePost(post.id); }}> Delete Post </button>
               </li>
             );
