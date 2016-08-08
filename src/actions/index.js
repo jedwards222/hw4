@@ -10,7 +10,8 @@ export const ActionTypes = {
   DELETE_POST: 'DELETE_POST',
 };
 
-const ROOT_URL = 'https://cs52-blog.herokuapp.com/api';
+const ROOT_URL = 'https://jedwardsblog.herokuapp.com/api';
+// const ROOT_URL = 'https://cs52-blog.herokuapp.com/api';
 const API_KEY = '?key=j_edwards';
 
 export function fetchPosts() {
