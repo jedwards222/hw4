@@ -13,9 +13,9 @@ export const ActionTypes = {
   AUTH_ERROR: 'AUTH_ERROR',
 };
 
-// const ROOT_URL = 'https://jedwardsblog.herokuapp.com/api';
+const ROOT_URL = 'https://jedwardsblog2.herokuapp.com/api';
 // const ROOT_URL = 'https://cs52-blog.herokuapp.com/api';
-const ROOT_URL = 'http://localhost:9090/api';
+// const ROOT_URL = 'http://localhost:9090/api';
 const API_KEY = '?key=j_edwards';
 
 export function fetchPosts() {
