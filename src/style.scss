@@ -126,3 +126,41 @@ a:hover, a:active {
   background-color: transparent;
   color: mediumblue;
 }
+
+.signUpButton {
+  border-color: navy;
+  background-color: lighten(navy, 2%);
+  color: darken(white, 10%);
+}
+.signUpButton:hover {
+  background-color: darken(navy, 0.5%);
+}
+.signUpButton:active {
+  background-color: darken(navy, 2%);
+  color: white;
+}
+
+.signInButton {
+  border-color: darkcyan;
+  background-color: lighten(darkcyan, 2%);
+  color: darken(white, 10%);
+}
+.signInButton:hover {
+  background-color: darken(darkcyan, 0.5%);
+}
+.signInButton:active {
+  background-color: darken(darkcyan, 2%);
+  color: white;
+}
+
+.SignupLink {
+  align-self: center;
+  color: cyan;
+  // opacity: 0.8;
+  // background-color: gray;
+  // padding: 4px;
+  // radius: 3px;
+}
+.SignupLink:hover {
+  color: deeppink;
+}
