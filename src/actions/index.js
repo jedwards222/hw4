@@ -32,8 +32,8 @@ export function createPost(post) {
   return (dispatch) => {
     const fields = { title: post.title, content: post.content, tags: post.tags };
     /* axios.post(`${ROOT_URL}/posts${API_KEY}`, fields).then(response => */
-    axios.post(`${ROOT_URL}/posts`, { headers:
-    { authorization: localStorage.getItem('token') }, data: fields }).then(response => {
+    axios.post(`${ROOT_URL}/posts`, fields, { headers:
+    { authorization: localStorage.getItem('token') } }).then(response => {
       dispatch({ type: ActionTypes.CREATE_POST, payload: { fields } });
       browserHistory.push('/');
     }).catch(error => {
@@ -46,8 +46,8 @@ export function updatePost(post, id) {
   return (dispatch) => {
     const fields = { title: post.title, content: post.content, tags: post.tags };
     // axios.put(`${ROOT_URL}/posts/${id}${API_KEY}`, fields).then(response
-    axios.put(`${ROOT_URL}/posts/${id}`, { headers:
-    { authorization: localStorage.getItem('token') }, data: fields }).then(response => {
+    axios.put(`${ROOT_URL}/posts/${id}`, fields, { headers:
+    { authorization: localStorage.getItem('token') } }).then(response => {
       dispatch({ type: ActionTypes.UPDATE_POST, fields, id });
     }).catch(error => {
       console.log('Error updating post');
